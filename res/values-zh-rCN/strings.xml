@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">超级理财房贷计算器</string>
+    <string name="work_shop">数字娱乐</string>
     <string name="realestatent_loan">房贷计算器</string>
     <string name="realestatent_loan_result">房贷计算结果</string>
     <string name="action_settings">设置</string>
@@ -92,4 +93,7 @@
     <string name="homepage_dialog_applist">应用列表</string>
     <string name="default_edit_text">0</string>
     <string name="alert_no_loan">请输入贷款金额</string>
+    <string name="menu_favorite">最爱</string>
+    <string name="menu_house_loan">房贷</string>
+    <string name="menu_personal_tax">个税</string>
 </resources>

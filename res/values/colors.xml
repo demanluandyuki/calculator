@@ -6,4 +6,7 @@
     <color name="result_normal_color">#FFFFFFF0</color>
     <color name="result_title_background">#FF636363</color>
     <color name="result_item_background">#FF4B0082</color>
+    <color name="actionbar_background">#7fffffff</color>
+    <color name="activity_background">#e5ffffff</color>
+    <color name="tab_text_color">#7f000000</color>
 </resources>

@@ -2,10 +2,9 @@ package com.joyfulmath.calculator;
 
 import com.joyfulmath.calculator.Engine.GeneralEngineType;
 import com.joyfulmath.calculator.Engine.CaculaterEngine.EngineParams;
-import com.joyfulmath.calculator.ads.BaseAdvertise;
-import com.joyfulmath.calculator.ads.YoumiAds;
 
 import android.os.Bundle;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -51,56 +50,59 @@ public class RealEstatentActivity extends Activity implements
 	private static String commercialRateStr;
 	private static EngineParams mEnginePamap = null;
 	private AlertClickListener mAlertListener = null;
-	private BaseAdvertise mAds = null;
 	private LinearLayout mAdsBanner = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_super_calculater);
+		initView();
+
+	}
+
+	// test code in home
+
+	private void initView() {
+		customerActionBar();
 		mRes = this.getResources();
 		prepareArrayAdaper();
 		mAlertListener = new AlertClickListener(this);
-		mAds = YoumiAds.getInstance(this.getApplicationContext());
-		mAds.init();
-		mAdsBanner = (LinearLayout) this.findViewById(R.id.linear_banner_1);
-
 	}
-	//test code in home
-	
+
+	protected void customerActionBar() {
+		ActionBar actionbar = this.getActionBar();
+		if (null != actionbar) {
+			actionbar.setDisplayShowTitleEnabled(true);
+			actionbar.setTitle(R.string.realestatent_loan);
+			actionbar.setDisplayHomeAsUpEnabled(true);
+			actionbar.setDisplayUseLogoEnabled(false);
+		}
+	}
+
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		mAds.setBanner(mAdsBanner);
 	}
-
-
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		mEnginePamap = null;
-		mAds.exit();
-		mAds = null;
 	}
-	
-	
-	
+
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		// TODO Auto-generated method stub
-		
-		if((keyCode == KeyEvent.KEYCODE_BACK) && event.getRepeatCount() == 0)
-		{
-			backKeyDialog();
-			return true;
-		}
-		
+
+		// if((keyCode == KeyEvent.KEYCODE_BACK) && event.getRepeatCount() == 0)
+		// {
+		// backKeyDialog();
+		// return true;
+		// }
+
 		return super.onKeyDown(keyCode, event);
 	}
-
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -197,13 +199,10 @@ public class RealEstatentActivity extends Activity implements
 		} else {
 			style = GeneralEngineType.LOAN_STYLE_AVERAGE_CAPITAL_PLUS_INTEREST;
 		}
-		
-		if(loan_com == 0 && loan_gjj == 0)
-		{
+
+		if (loan_com == 0 && loan_gjj == 0) {
 			showNoLoanAlert();
-		}
-		else
-		{
+		} else {
 			StartTransferRealEstatentEngine(year, commercial_rate,
 					loan_com * 10000, RATE_GONGJJ, loan_gjj * 10000, style);
 		}
@@ -238,49 +237,44 @@ public class RealEstatentActivity extends Activity implements
 
 	public void backKeyDialog() {
 		mAltType = ALERT_TYPE_SHOW_APP;
-		if(mAltDialog == null)
-		{
+		if (mAltDialog == null) {
 			mAltDialog = new AlertDialog.Builder(this)
-			.setTitle(R.string.homepage_back_dialog_title)
-			.setMessage(R.string.homepage_back_dialog_message)
-			.setIcon(R.drawable.ic_launcher)
-			.setPositiveButton(R.string.homepage_dialog_ok, mAlertListener).
-			setNegativeButton(R.string.homepage_dialog_applist, mAlertListener).
-			setNeutralButton(R.string.homepage_dialog_cancel,mAlertListener).
-			create();
+					.setTitle(R.string.homepage_back_dialog_title)
+					.setMessage(R.string.homepage_back_dialog_message)
+					.setIcon(R.drawable.ic_launcher)
+					.setPositiveButton(R.string.homepage_dialog_ok,
+							mAlertListener)
+					.setNegativeButton(R.string.homepage_dialog_applist,
+							mAlertListener)
+					.setNeutralButton(R.string.homepage_dialog_cancel,
+							mAlertListener).create();
 		}
 		mAltDialog.show();
 	}
 
-	public void disMissDialog()
-	{
+	public void disMissDialog() {
 		mAltDialog.dismiss();
 	}
-	
-	public void showNoLoanAlert()
-	{
+
+	public void showNoLoanAlert() {
 		mAltType = ALERT_TYPE_NOLOAN;
-		if(mNullAlt == null)
-		{
+		if (mNullAlt == null) {
 			mNullAlt = new AlertDialog.Builder(this)
-						.setTitle(R.string.app_name)
-						.setMessage(R.string.alert_no_loan)
-						.setNegativeButton(R.string.homepage_dialog_ok,mAlertListener)
-						.create();
+					.setTitle(R.string.app_name)
+					.setMessage(R.string.alert_no_loan)
+					.setNegativeButton(R.string.homepage_dialog_ok,
+							mAlertListener).create();
 		}
 		mNullAlt.show();
 	}
-	
-	public void dismissNoLoanAlert()
-	{
+
+	public void dismissNoLoanAlert() {
 		mNullAlt.dismiss();
 	}
-	
-	public void showAppWall()
-	{
-		mAds.showAppWall();
+
+	public void showAppWall() {
 	}
-	
+
 	private class AlertClickListener implements DialogInterface.OnClickListener {
 
 		private RealEstatentActivity mReActivity = null;
@@ -291,11 +285,10 @@ public class RealEstatentActivity extends Activity implements
 
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
-			
-			if(mAltType == ALERT_TYPE_SHOW_APP)
-			{
+
+			if (mAltType == ALERT_TYPE_SHOW_APP) {
 				mReActivity.disMissDialog();
-				Log.i(TAG, "AlertClickListener.onclick which:"+which);
+				Log.i(TAG, "AlertClickListener.onclick which:" + which);
 				switch (which) {
 				case DialogInterface.BUTTON_POSITIVE:
 					mReActivity.finish();
@@ -306,9 +299,7 @@ public class RealEstatentActivity extends Activity implements
 					mReActivity.showAppWall();
 					break;
 				}
-			}
-			else if(mAltType == ALERT_TYPE_NOLOAN)
-			{
+			} else if (mAltType == ALERT_TYPE_NOLOAN) {
 				mReActivity.dismissNoLoanAlert();
 			}
 

@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">SuperCalculater</string>
+    <string name="work_shop">JoyfulMath</string>
     <string name="realestatent_loan">RealEstatent Loan Calculator</string>
     <string name="realestatent_loan_result">RealEstatent Loan Calculator Result</string>
     <string name="action_settings">Settings</string>
@@ -92,4 +93,7 @@
     <string name="homepage_dialog_cancel">Cancel</string>
     <string name="homepage_dialog_applist">Applist</string>
     <string name="alert_no_loan">Please edit the loan</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_house_loan">HouseLoan</string>
+    <string name="menu_personal_tax">PersonTax</string>
 </resources>

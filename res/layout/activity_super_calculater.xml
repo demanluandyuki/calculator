@@ -6,8 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RealEstatentActivity"
-    android:background="@drawable/bg_activity">
+    tools:context=".RealEstatentActivity">
     <TextView
         android:id="@+id/loan_style_text_id"
         android:layout_width="wrap_content"
@@ -175,23 +174,20 @@
  	<Button android:id="@+id/btn_cal_start"
  	    android:layout_width="wrap_content"
  	    android:layout_height="wrap_content"
- 	    android:layout_above="@+id/linear_banner_1"
- 	    android:layout_marginBottom="0dp"
+ 	    android:layout_alignParentBottom="true"
+ 	    android:layout_marginBottom="2dp"
+ 	    android:layout_marginLeft="10dp"
  	    android:layout_alignParentLeft="true"
  	    android:text="@string/start_calculater"
  	    />
  	<Button android:id="@+id/btn_cal_reset"
  	    android:layout_width="wrap_content"
  	    android:layout_height="wrap_content"
- 	    android:layout_above="@+id/linear_banner_1"
+ 	    android:layout_alignParentEnd = "true"
  	    android:layout_alignParentRight = "true"
- 	    android:layout_marginBottom="0dp"
+ 	    android:layout_alignParentBottom="true"
+ 	     android:layout_marginRight="10dp"
+ 	    android:layout_marginBottom="2dp"
  	    android:text="@string/reset_calculater"
  	    />
- 	<LinearLayout android:id="@+id/linear_banner_1"
- 	    android:layout_width="match_parent"
- 	    android:layout_height="wrap_content"
- 	    android:layout_alignParentBottom="true"
- 	    android:layout_marginBottom="0dp">
- 	</LinearLayout>
 </RelativeLayout>
