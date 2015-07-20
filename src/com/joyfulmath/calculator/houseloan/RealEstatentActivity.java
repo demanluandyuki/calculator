@@ -3,11 +3,7 @@ package com.joyfulmath.calculator.houseloan;
 import com.joyfulmath.calculator.R;
 import com.joyfulmath.calculator.Engine.GeneralEngineType;
 import com.joyfulmath.calculator.Engine.CaculaterEngine.EngineParams;
-import com.joyfulmath.calculator.R.drawable;
-import com.joyfulmath.calculator.R.id;
-import com.joyfulmath.calculator.R.layout;
-import com.joyfulmath.calculator.R.menu;
-import com.joyfulmath.calculator.R.string;
+
 
 import android.os.Bundle;
 import android.app.ActionBar;
@@ -24,7 +20,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -56,7 +51,6 @@ public class RealEstatentActivity extends Activity implements
 	private static String commercialRateStr;
 	private static EngineParams mEnginePamap = null;
 	private AlertClickListener mAlertListener = null;
-	private LinearLayout mAdsBanner = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -144,7 +144,6 @@ public class CaculaterEngine {
 		/**
 		 * 
 		 */
-		private static final long serialVersionUID = 101L;
 		public int year = 0;
 		public double commercial_rate = 0.0;
 		public int commercial_loan = 0;
@@ -261,8 +260,6 @@ public class CaculaterEngine {
 	}
 
 	public static class EngineResultParam {
-
-		private static final long serialVersionUID = -2449843421756795694L;
 
 		public double firstmonth = 0.0;
 		public double totalInterest = 0.0;
