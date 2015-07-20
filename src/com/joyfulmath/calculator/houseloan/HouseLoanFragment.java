@@ -11,6 +11,12 @@ import com.joyfulmath.calculator.R;
 public class HouseLoanFragment extends CalculatorFragment {
 	
 	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		setActionBarTitle(getString(R.string.menu_house_loan));
+	}
+	
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.houseloan_fragment, null);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">超级理财房贷计算器</string>
+    <string name="app_name">理房器</string>
     <string name="work_shop">数字娱乐</string>
     <string name="realestatent_loan">房贷计算器</string>
     <string name="realestatent_loan_result">房贷计算结果</string>

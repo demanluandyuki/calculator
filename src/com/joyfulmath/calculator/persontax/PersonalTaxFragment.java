@@ -9,6 +9,13 @@ import com.joyfulmath.calculator.CalculatorFragment;
 import com.joyfulmath.calculator.R;
 
 public class PersonalTaxFragment extends CalculatorFragment {
+		
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		setActionBarTitle(getString(R.string.menu_personal_tax));
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

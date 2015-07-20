@@ -11,6 +11,12 @@ import com.joyfulmath.calculator.R;
 public class FarvoriteFragment extends CalculatorFragment {
 
 	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		setActionBarTitle(getString(R.string.menu_favorite));
+	}
+	
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.favorite_fragment, null);
@@ -32,4 +38,5 @@ public class FarvoriteFragment extends CalculatorFragment {
 		super.onDestroy();
 	}
 	
+
 }

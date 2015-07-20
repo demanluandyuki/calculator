@@ -7,6 +7,7 @@ import com.joyfulmath.calculator.BottomTabBar.onTabSelectedListener;
 import com.joyfulmath.calculator.favorite.FarvoriteFragment;
 import com.joyfulmath.calculator.houseloan.HouseLoanFragment;
 import com.joyfulmath.calculator.persontax.PersonalTaxFragment;
+import com.joyfulmath.calculator.utils.TraceLog;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -15,6 +16,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class CalculatorMainActivity extends Activity implements onTabSelectedListener{
 
@@ -26,6 +28,7 @@ public class CalculatorMainActivity extends Activity implements onTabSelectedLis
 	private List<Fragment> mFragments = new ArrayList<Fragment>();
 	
 	BottomTabBar tabBar = null;
+	TextView mTitle = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +61,21 @@ public class CalculatorMainActivity extends Activity implements onTabSelectedLis
 	public void customActionBar()
 	{
 		ActionBar bar = getActionBar();
-		bar.setTitle(R.string.work_shop);
-		bar.setDisplayHomeAsUpEnabled(true);
-		bar.setDisplayShowHomeEnabled(false);
-		bar.setDisplayUseLogoEnabled(false);
+		if(bar!=null)
+		{
+			bar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+			bar.setCustomView(R.layout.actionbar_layout);
+			mTitle = (TextView) bar.getCustomView().findViewById(R.id.action_title);
+		}
+	}
+	
+	public void setActionBarTitle(String title)
+	{
+		TraceLog.i(title);
+		if(mTitle!=null)
+		{
+			mTitle.setText(title);
+		}
 	}
 	
 	void initFragments()
