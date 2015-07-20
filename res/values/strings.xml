@@ -96,4 +96,10 @@
     <string name="menu_favorite">Favorite</string>
     <string name="menu_house_loan">HouseLoan</string>
     <string name="menu_personal_tax">PersonTax</string>
+    <string name="list_header">header</string>
+    <string-array name="loan_item_array">
+        <item>House Loan</item>
+        <item>Prepayment</item>
+        <item>Payment</item>
+    </string-array>
 </resources>

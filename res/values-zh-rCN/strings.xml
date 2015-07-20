@@ -96,4 +96,10 @@
     <string name="menu_favorite">最爱</string>
     <string name="menu_house_loan">房贷</string>
     <string name="menu_personal_tax">个税</string>
+    <string name="list_header">header</string>
+    <string-array name="loan_item_array">
+        <item>房贷</item>
+        <item>提前还款</item>
+        <item>还款情况</item>
+    </string-array>
 </resources>
