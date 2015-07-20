@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.joyfulmath.calculator.RealEstatentActivity"
+            android:name="com.joyfulmath.calculator.houseloan.RealEstatentActivity"
             android:configChanges="keyboardHidden|orientation"
             android:icon="@drawable/ic_launcher"
             android:label="@string/realestatent_loan"
@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.joyfulmath.calculator.RealEstatentResultActivity"
+            android:name="com.joyfulmath.calculator.houseloan.RealEstatentResultActivity"
             android:configChanges="keyboardHidden|orientation"
             android:icon="@drawable/ic_launcher"
             android:label="@string/realestatent_loan_result"

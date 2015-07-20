@@ -1,7 +1,13 @@
-package com.joyfulmath.calculator;
+package com.joyfulmath.calculator.houseloan;
 
+import com.joyfulmath.calculator.R;
 import com.joyfulmath.calculator.Engine.GeneralEngineType;
 import com.joyfulmath.calculator.Engine.CaculaterEngine.EngineParams;
+import com.joyfulmath.calculator.R.drawable;
+import com.joyfulmath.calculator.R.id;
+import com.joyfulmath.calculator.R.layout;
+import com.joyfulmath.calculator.R.menu;
+import com.joyfulmath.calculator.R.string;
 
 import android.os.Bundle;
 import android.app.ActionBar;

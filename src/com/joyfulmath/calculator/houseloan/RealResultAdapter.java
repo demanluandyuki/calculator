@@ -1,9 +1,12 @@
-package com.joyfulmath.calculator;
+package com.joyfulmath.calculator.houseloan;
 
 import java.util.ArrayList;
 
+import com.joyfulmath.calculator.R;
 import com.joyfulmath.calculator.Engine.CaculaterEngine.EngineResultParam;
 import com.joyfulmath.calculator.Engine.GeneralEngineType.MonthLoanResult;
+import com.joyfulmath.calculator.R.id;
+import com.joyfulmath.calculator.R.layout;
 
 import android.content.Context;
 import android.util.Log;

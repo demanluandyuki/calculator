@@ -35,14 +35,14 @@
     <style 
         name="ActionBarTitleStyle" 
         parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-    	<item name="android:textSize">15sp</item>
+    	<item name="android:textSize">20sp</item>
     	<item name="android:gravity">center</item>
 	    <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
 	</style>
     
     <style name="TabTextStyle">
-        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:textColor">@drawable/tab_text_color</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
