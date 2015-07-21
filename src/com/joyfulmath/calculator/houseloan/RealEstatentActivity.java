@@ -72,10 +72,10 @@ public class RealEstatentActivity extends Activity implements
 	protected void customerActionBar() {
 		ActionBar actionbar = this.getActionBar();
 		if (null != actionbar) {
-			actionbar.setDisplayShowTitleEnabled(true);
-			actionbar.setTitle(R.string.realestatent_loan);
-			actionbar.setDisplayHomeAsUpEnabled(true);
-			actionbar.setDisplayUseLogoEnabled(false);
+			actionbar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+			actionbar.setCustomView(R.layout.actionbar_layout);
+			TextView title = (TextView) actionbar.getCustomView().findViewById(R.id.action_title);
+			title.setText(R.string.realestatent_loan);
 		}
 	}
 
