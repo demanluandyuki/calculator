@@ -81,7 +81,7 @@ public class HouseLoanFragment extends CalculatorFragment {
 				switch(position)
 				{
 				case LOAN_INDEX:
-					Intent intent = new Intent(getActivity(),RealEstatentActivity.class);
+					Intent intent = new Intent(getActivity(),HouseLoanEditActivity.class);
 					startActivity(intent);
 					break;
 				case PREPAYMENT_INDEX:

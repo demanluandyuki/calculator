@@ -102,4 +102,8 @@
         <item>Prepayment</item>
         <item>Payment</item>
     </string-array>
+    <string name="payment_sytle_text">Payment Way</string>
+    <string name="payment_sytle_text1">Commercial loan</string>
+    <string name="payment_sytle_text2">HPF loan</string>
+    <string name="payment_sytle_text3">Combined loan</string>
 </resources>

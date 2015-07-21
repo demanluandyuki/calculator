@@ -3,7 +3,7 @@ package com.joyfulmath.calculator.houseloan;
 import com.joyfulmath.calculator.R;
 import com.joyfulmath.calculator.Engine.GeneralEngineType;
 import com.joyfulmath.calculator.Engine.CaculaterEngine.EngineParams;
-
+import com.joyfulmath.calculator.utils.TraceLog;
 
 import android.os.Bundle;
 import android.app.ActionBar;
@@ -12,9 +12,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -27,7 +25,6 @@ import android.widget.TextView;
 public class RealEstatentActivity extends Activity implements
 		android.view.View.OnClickListener, OnItemSelectedListener {
 
-	private final static String TAG = "SuperCalculater.activity";
 	private final static String gongjjRateStr = "4.5%";
 	private final static double RATE_GONGJJ = 4.5;
 	private final static double RATE_COMMERCIAL_BASE = 6.55;
@@ -55,7 +52,7 @@ public class RealEstatentActivity extends Activity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_super_calculater);
+		setContentView(R.layout.houseloan_manager_layout);
 		initView();
 
 	}
@@ -93,26 +90,11 @@ public class RealEstatentActivity extends Activity implements
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
-
-		// if((keyCode == KeyEvent.KEYCODE_BACK) && event.getRepeatCount() == 0)
-		// {
-		// backKeyDialog();
-		// return true;
-		// }
-
 		return super.onKeyDown(keyCode, event);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.super_calculater, menu);
-		return true;
-	}
-
 	public void resetUIStatus() {
-		Log.i(TAG, "[resetUIStatus]");
+		TraceLog.i();
 		mSpinnerYear.setSelection(19);
 		mSpinnerRate.setSelection(3);
 		mEditGongjj.setText("");
@@ -129,7 +111,7 @@ public class RealEstatentActivity extends Activity implements
 	}
 
 	public void prepareArrayAdaper() {
-		Log.i(TAG, "[prepareArrayAdaper]");
+		TraceLog.i();
 		mSpinnerYear = (Spinner) this.findViewById(R.id.loan_year_spinner);
 		mSpinnerYear.setOnItemSelectedListener(this);
 		mSpinnerRate = (Spinner) this.findViewById(R.id.loan_rate_spinner);
@@ -148,7 +130,7 @@ public class RealEstatentActivity extends Activity implements
 	public void StartTransferRealEstatentEngine(int year,
 			double commercial_rate, int commercial_loan, double gongjj_rate,
 			int gongjj_loan, int loan_style) {
-		Log.i(TAG, "[StartTransferRealEstatentEngine] year " + year
+		TraceLog.i("[StartTransferRealEstatentEngine] year " + year
 				+ "\n commercial_rate " + commercial_rate
 				+ "\n commercial_loan " + commercial_loan + "\n gongjj_rate "
 				+ gongjj_rate + "\n gongjj_loan " + gongjj_loan
@@ -162,7 +144,7 @@ public class RealEstatentActivity extends Activity implements
 		Bundle bundle = new Bundle();
 		bundle.putParcelable(RealEstatentResultActivity.KEY_PARAM, mEnginePamap);
 		intent.putExtras(bundle);
-		Log.i(TAG, "[StartTransferRealEstatentEngine] start activity");
+		TraceLog.i("StartTransferRealEstatentEngine");
 		this.startActivity(intent);
 	}
 
@@ -288,7 +270,7 @@ public class RealEstatentActivity extends Activity implements
 
 			if (mAltType == ALERT_TYPE_SHOW_APP) {
 				mReActivity.disMissDialog();
-				Log.i(TAG, "AlertClickListener.onclick which:" + which);
+				TraceLog.i("which:"+which);
 				switch (which) {
 				case DialogInterface.BUTTON_POSITIVE:
 					mReActivity.finish();

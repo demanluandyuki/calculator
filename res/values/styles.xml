@@ -74,4 +74,43 @@
        	<item name="android:textSize">15sp</item>
        	<item name="android:textColor">#7f000000</item>
     </style>
+    <style name="LoanItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_view_item_height</item>
+    </style>
+    <style name="LoanItemStyle.textstyle">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">@dimen/list_view_item_height</item>
+        <item name="android:gravity">start|center_vertical</item>
+       	<item name="android:textSize">14dp</item>
+       	<item name="android:textColor">#7f000000</item>
+       	<item name="android:singleLine">true</item>
+       	<item name="android:layout_marginRight">10dp</item>
+       	<item name="android:layout_marginLeft">10dp</item>
+    </style>
+    <style name="LoanItemStyle.radioitem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/list_view_item_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <style name="LoanItemStyle.radioitem.item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+       	<item name="android:textSize">13dp</item>
+       	<item name="android:textColor">#7f000000</item>
+       	<item name="android:singleLine">true</item>
+       	<item name="android:background">@drawable/loan_payment_item_bg_left</item>
+       	<item name="android:button">@null</item>
+       	<item name="android:layout_weight">1</item>
+       	<item name="android:layout_marginRight">0dp</item>
+    </style>
+    <style name="LoanItemStyle.divideline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+       	<item name="android:background">@drawable/dash_line</item>
+       	<item name="android:layout_marginRight">10dp</item>
+       	<item name="android:layout_marginLeft">10dp</item>
+    </style>
 </resources>

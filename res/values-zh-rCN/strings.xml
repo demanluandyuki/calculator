@@ -102,4 +102,8 @@
         <item>提前还款</item>
         <item>还款情况</item>
     </string-array>
+    <string name="payment_sytle_text">贷款类型</string>
+    <string name="payment_sytle_text1">商业贷款</string>
+    <string name="payment_sytle_text2">公积金贷款</string>
+    <string name="payment_sytle_text3">组合贷款</string>
 </resources>
