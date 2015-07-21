@@ -2,52 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layerType="software" >
-    
+    android:layerType="software"
+    android:orientation="vertical" >
+
     <RelativeLayout
-        style="@style/LoanItemStyle"
         android:id="@+id/loan_type_layout"
-        >
+        style="@style/LoanItemStyle" >
+
         <TextView
-            style="@style/LoanItemStyle.textstyle"
             android:id="@+id/loan_type_text"
-            android:text="@string/payment_sytle_text"
-            />
+            style="@style/LoanItemStyle.textstyle"
+            android:text="@string/payment_sytle_text" />
+
         <RadioGroup
-            style="@style/LoanItemStyle.radioitem"
             android:id="@+id/loan_type_content"
-            android:orientation="horizontal"
-            android:checkedButton="@+id/loan_type_content_1"
-            android:layout_toRightOf="@id/loan_type_text"
+            style="@style/LoanItemStyle.radioitem"
             android:layout_toEndOf="@id/loan_type_text"
+            android:layout_toRightOf="@id/loan_type_text"
+            android:checkedButton="@+id/loan_type_content_1"
             android:gravity="center_vertical"
-            >
+            android:orientation="horizontal" >
+
             <RadioButton
                 android:id="@+id/loan_type_content_1"
                 style="@style/LoanItemStyle.radioitem.item"
-                android:text="@string/payment_sytle_text1"
-                android:background="@drawable/loan_payment_item_bg_left">"
+                android:background="@drawable/loan_payment_item_bg_left"
+                android:text="@string/payment_sytle_text1" >
+"
             </RadioButton>
 
             <RadioButton
                 android:id="@+id/loan_type_content_2"
                 style="@style/LoanItemStyle.radioitem.item"
-                android:text="@string/payment_sytle_text2"
-                android:background="@drawable/loan_payment_item_bg_middle" >
+                android:background="@drawable/loan_payment_item_bg_middle"
+                android:text="@string/payment_sytle_text2" >
             </RadioButton>
 
             <RadioButton
                 android:id="@+id/loan_type_content_3"
                 style="@style/LoanItemStyle.radioitem.item"
-                android:text="@string/payment_sytle_text3"
-                android:background="@drawable/loan_payment_item_bg_right" >
+                android:background="@drawable/loan_payment_item_bg_right"
+                android:text="@string/payment_sytle_text3" >
             </RadioButton>
         </RadioGroup>
+
         <View
             style="@style/LoanItemStyle.divideline"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
-    
 
+    <RelativeLayout
+        android:id="@+id/loan_amount_1"
+        style="@style/LoanItemStyle" >
+
+        <TextView
+            android:id="@+id/loan_amount_text_1"
+            style="@style/LoanItemStyle.textstyle"
+            android:text="@string/payment_sytle_amount_text1" />
+
+        <EditText
+            android:id="@+id/loan_amount_edit_1"
+            style="@style/LoanItemStyle.edittextstyle"
+            android:layout_toEndOf="@id/loan_amount_text_1"
+            android:layout_toRightOf="@id/loan_amount_text_1"
+            android:hint="@string/wang" />
+
+        <View
+            style="@style/LoanItemStyle.divideline"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/loan_amount_2"
+        style="@style/LoanItemStyle" >
+
+        <TextView
+            android:id="@+id/loan_amount_text_2"
+            style="@style/LoanItemStyle.textstyle"
+            android:text="@string/payment_sytle_amount_text2" />
+
+        <EditText
+            android:id="@+id/loan_amount_edit_2"
+            style="@style/LoanItemStyle.edittextstyle"
+            android:layout_toEndOf="@id/loan_amount_text_2"
+            android:layout_toRightOf="@id/loan_amount_text_2"
+            android:hint="@string/wang" />
+
+        <View
+            style="@style/LoanItemStyle.divideline"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
 </LinearLayout>

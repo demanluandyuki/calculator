@@ -24,7 +24,7 @@
         <item>等额本息</item>
     </string-array>
 
-    <string name="wang">万元</string>
+
 
     <string-array name="rate_array">
         <item>12年07月06日利率上限1.3倍</item>
@@ -106,4 +106,7 @@
     <string name="payment_sytle_text1">商业贷款</string>
     <string name="payment_sytle_text2">公积金贷款</string>
     <string name="payment_sytle_text3">组合贷款</string>
+    <string name="payment_sytle_amount_text1">商贷金额</string>
+    <string name="payment_sytle_amount_text2">公积金金额</string>
+    <string name="wang">万元</string>
 </resources>

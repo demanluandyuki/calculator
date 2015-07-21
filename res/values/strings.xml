@@ -24,8 +24,6 @@
         <item>same return base loan</item>
     </string-array>
 
-    <string name="wang">W</string>
-
     <string-array name="rate_array">
         <item>July 6, 2012 rate (1.3)</item>
         <item>July 6, 2012 rate (1.2)</item>
@@ -106,4 +104,7 @@
     <string name="payment_sytle_text1">Commercial loan</string>
     <string name="payment_sytle_text2">HPF loan</string>
     <string name="payment_sytle_text3">Combined loan</string>
+    <string name="payment_sytle_amount_text1">CML Amount</string>
+    <string name="payment_sytle_amount_text2">HPF Amount</string>
+    <string name="wang">W Yuan</string>
 </resources>
